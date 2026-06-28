@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Celestia Gourmet - Luxury Dining Experience">
+<meta name="keywords" content="Restaurant, Luxury Dining, Food, Gourmet">
+<meta name="author" content="Celestia Gourmet">
+
+<title>Celestia Gourmet | Luxury Dining Experience</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<!-- Swiper -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="loader-circle"></div>
+
+<h2>Celestia Gourmet</h2>
+
+</div>
+
+<!-- Cursor -->
+
+<div class="cursor"></div>
+
+<!-- Scroll Progress -->
+
+<div id="progressBar"></div>
+
+<!-- Header -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-utensils"></i>
+
+<h2>Celestia <span>Gourmet</span></h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#story">Story</a></li>
+
+<li><a href="#menu">Menu</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#chef">Chefs</a></li>
+
+<li><a href="#reservation">Reservation</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-icons">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<i class="fa-solid fa-heart"></i>
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</div>
+
+<div class="menu-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<div class="hero-video">
+
+<video autoplay muted loop playsinline>
+
+<source src="videos/restaurant.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+</div>
+
+<div class="hero-container">
+
+<div class="hero-left" data-aos="fade-right">
+
+<span class="welcome">
+
+Luxury Fine Dining
+
+</span>
+
+<h1>
+
+Experience
+
+<span>World-Class</span>
+
+Cuisine
+
+</h1>
+
+<p>
+
+Where every bite tells a story.
+Enjoy handcrafted dishes prepared by award-winning chefs using premium ingredients sourced around the world.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="primary-btn">
+
+Explore Menu
+
+</a>
+
+<a href="#reservation" class="secondary-btn">
+
+Reserve Table
+
+</a>
+
+</div>
+
+<div class="hero-info">
+
+<div>
+
+<h2>18+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div>
+
+<h2>350+</h2>
+
+<p>Signature Dishes</p>
+
+</div>
+
+<div>
+
+<h2>75K+</h2>
+
+<p>Happy Guests</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right" data-aos="fade-left">
+
+<img src="images/hero-food.png" alt="Luxury Food">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Floating Buttons -->
+
+<div class="floating-order">
+
+<i class="fa-solid fa-burger"></i>
+
+<span>Order Now</span>
+
+</div>
+
+<div class="ai-chat">
+
+<i class="fa-solid fa-robot"></i>
+
+</div>
+
+<div class="back-to-top">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</div>
+<!-- ==================== OUR STORY ==================== -->
+
+<section class="story" id="story">
+
+<div class="section-header" data-aos="fade-up">
+
+<span>Our Story</span>
+
+<h2>Crafting Culinary Memories Since 2008</h2>
+
+<p>
+Celestia Gourmet was founded with a vision to combine luxury dining,
+creative recipes and unforgettable hospitality.
+</p>
+
+</div>
+
+<div class="story-container">
+
+<div class="story-image" data-aos="fade-right">
+
+<img src="images/story.jpg" alt="Restaurant Story">
+
+</div>
+
+<div class="story-content" data-aos="fade-left">
+
+<div class="story-box">
+
+<i class="fa-solid fa-seedling"></i>
+
+<div>
+
+<h3>Fresh Ingredients</h3>
+
+<p>
+Every dish is prepared using farm fresh vegetables,
+premium meats and organic spices.
+</p>
+
+</div>
+
+</div>
+
+<div class="story-box">
+
+<i class="fa-solid fa-champagne-glasses"></i>
+
+<div>
+
+<h3>Luxury Experience</h3>
+
+<p>
+Elegant interiors with live music and world class hospitality.
+</p>
+
+</div>
+
+</div>
+
+<div class="story-box">
+
+<i class="fa-solid fa-user-chef"></i>
+
+<div>
+
+<h3>Expert Chefs</h3>
+
+<p>
+Award winning chefs prepare every meal with perfection.
+</p>
+
+</div>
+
+</div>
+
+<a href="#reservation" class="primary-btn">
+
+Book Your Table
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==================== FEATURES ==================== -->
+
+<section class="features">
+
+<div class="section-header" data-aos="fade-up">
+
+<span>Why Choose Us</span>
+
+<h2>Luxury Beyond Expectations</h2>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>Premium Quality</h3>
+
+<p>Only the finest ingredients.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bowl-food"></i>
+
+<h3>350+ Dishes</h3>
+
+<p>International cuisines and signature specials.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Fast Delivery</h3>
+
+<p>Fresh food delivered quickly.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-music"></i>
+
+<h3>Live Music</h3>
+
+<p>Enjoy live performances every weekend.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-wifi"></i>
+
+<h3>Free WiFi</h3>
+
+<p>High speed internet for every guest.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-car"></i>
+
+<h3>Free Parking</h3>
+
+<p>Convenient parking space available.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==================== STATISTICS ==================== -->
+
+<section class="statistics">
+
+<div class="stat-card">
+
+<h2>18+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>350+</h2>
+
+<p>Signature Dishes</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>75K+</h2>
+
+<p>Happy Guests</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>40+</h2>
+
+<p>Master Chefs</p>
+
+</div>
+
+</section>
+
+<!-- ==================== MENU ==================== -->
+
+<section class="menu" id="menu">
+
+<div class="section-header">
+
+<span>Signature Menu</span>
+
+<h2>Chef's Special Collection</h2>
+
+<p>
+Discover handcrafted dishes prepared with premium ingredients.
+</p>
+
+</div>
+
+<div class="menu-filter">
+
+<button class="active">All</button>
+
+<button>Pizza</button>
+
+<button>Burger</button>
+
+<button>Pasta</button>
+
+<button>Dessert</button>
+
+<button>Drinks</button>
+
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="images/pizza.jpg" alt="Pizza">
+
+<span class="tag">Popular</span>
+
+</div>
+
+<div class="menu-content">
+
+<div class="rating">★★★★★</div>
+
+<h3>Royal Truffle Pizza</h3>
+
+<p>Wood fired pizza with mozzarella and herbs.</p>
+
+<div class="price-row">
+
+<h4>₹699</h4>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="images/burger.jpg" alt="Burger">
+
+<span class="tag">Chef Choice</span>
+
+</div>
+
+<div class="menu-content">
+
+<div class="rating">★★★★★</div>
+
+<h3>Smoked Angus Burger</h3>
+
+<p>Premium Angus beef with cheddar cheese.</p>
+
+<div class="price-row">
+
+<h4>₹549</h4>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="images/pasta.jpg" alt="Pasta">
+
+<span class="tag">New</span>
+
+</div>
+
+<div class="menu-content">
+
+<div class="rating">★★★★☆</div>
+
+<h3>Creamy Alfredo Pasta</h3>
+
+<p>Italian pasta tossed with parmesan cream.</p>
+
+<div class="price-row">
+
+<h4>₹499</h4>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==================== GALLERY ==================== -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-header">
+
+<span>Gallery</span>
+
+<h2>Moments Of Elegance</h2>
+
+<p>
+Take a glimpse into our luxurious dining atmosphere.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="images/gallery1.jpg" alt="Gallery">
+
+<img src="images/gallery2.jpg" alt="Gallery">
+
+<img src="images/gallery3.jpg" alt="Gallery">
+
+<img src="images/gallery4.jpg" alt="Gallery">
+
+<img src="images/gallery5.jpg" alt="Gallery">
+
+<img src="images/gallery6.jpg" alt="Gallery">
+
+</div>
+
+</section>
+<!--==================== CHEFS ====================-->
+
+<section class="chef" id="chef">
+
+<div class="section-header">
+
+<span>Our Experts</span>
+
+<h2>Meet Our Master Chefs</h2>
+
+<p>
+Award-winning chefs delivering unforgettable culinary experiences.
+</p>
+
+</div>
+
+<div class="chef-container">
+
+<div class="chef-card">
+
+<img src="images/chef1.jpg" alt="Chef">
+
+<div class="chef-content">
+
+<h3>Chef Alexander Reed</h3>
+
+<p>Executive Chef</p>
+
+<div class="chef-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="chef-card">
+
+<img src="images/chef2.jpg" alt="Chef">
+
+<div class="chef-content">
+
+<h3>Chef Sophia Martinez</h3>
+
+<p>Pastry Specialist</p>
+
+<div class="chef-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="chef-card">
+
+<img src="images/chef3.jpg" alt="Chef">
+
+<div class="chef-content">
+
+<h3>Chef Ethan Brooks</h3>
+
+<p>Italian Cuisine</p>
+
+<div class="chef-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==================== TESTIMONIALS ====================-->
+
+<section class="testimonials">
+
+<div class="section-header">
+
+<span>Guest Reviews</span>
+
+<h2>What Our Guests Say</h2>
+
+</div>
+
+<div class="testimonial-container">
+
+<div class="testimonial-card">
+
+<i class="fas fa-quote-left"></i>
+
+<p>Absolutely amazing experience. Outstanding food and service.</p>
+
+<div class="customer">
+
+<h3>Emily Carter</h3>
+
+<span>Food Blogger</span>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<i class="fas fa-quote-left"></i>
+
+<p>Luxury ambience with world-class dishes.</p>
+
+<div class="customer">
+
+<h3>Daniel Wilson</h3>
+
+<span>Business Owner</span>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<i class="fas fa-quote-left"></i>
+
+<p>One of the finest dining experiences I've ever had.</p>
+
+<div class="customer">
+
+<h3>Olivia Johnson</h3>
+
+<span>Travel Influencer</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==================== RESERVATION ====================-->
+
+<section class="reservation" id="reservation">
+
+<div class="section-header">
+
+<span>Book Now</span>
+
+<h2>Reserve Your Table</h2>
+
+</div>
+
+<div class="reservation-container">
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="date" required>
+
+<input type="time" required>
+
+<select required>
+
+<option>Select Guests</option>
+
+<option>1 Person</option>
+
+<option>2 Persons</option>
+
+<option>4 Persons</option>
+
+<option>6 Persons</option>
+
+</select>
+
+<textarea placeholder="Special Requests"></textarea>
+
+<button type="submit">
+
+Reserve Now
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!--==================== CONTACT ====================-->
+
+<section class="contact" id="contact">
+
+<div class="section-header">
+
+<span>Get In Touch</span>
+
+<h2>Contact Us</h2>
+
+</div>
+
+<div class="contact-container">
+
+<div class="contact-box">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Address</h3>
+
+<p>25 Royal Avenue, Chennai, Tamil Nadu</p>
+
+</div>
+
+<div class="contact-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>Phone</h3>
+
+<p>+91 98765 43210</p>
+
+</div>
+
+<div class="contact-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>info@celestiagourmet.com</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==================== FOOTER ====================-->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-logo">
+
+<h2>Celestia Gourmet</h2>
+
+<p>Where Every Bite Tells a Story.</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+
+<a href="#story">Story</a>
+
+<a href="#menu">Menu</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#reservation">Reservation</a>
+
+</div>
+
+<div class="footer-social">
+
+<h3>Follow Us</h3>
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+<p>&copy; 2026 Celestia Gourmet. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<!--==================== CHAT WINDOW ====================-->
+
+<div class="chat-window">
+
+<div class="chat-header">
+
+<h3>AI Assistant</h3>
+
+<button class="close-chat">&times;</button>
+
+</div>
+
+<div class="chat-body"></div>
+
+<div class="chat-input">
+
+<input type="text" placeholder="Ask something...">
+
+<button class="send-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<!--==================== SHOPPING CART ====================-->
+
+<div class="cart-panel">
+
+<div class="cart-header">
+
+<h3>Your Cart</h3>
+
+</div>
+
+<div class="cart-items"></div>
+
+<button class="checkout-btn">
+
+Checkout
+
+</button>
+
+</div>
+
+<!--==================== JAVASCRIPT ====================-->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+if(typeof AOS!=="undefined"){
+
+AOS.init({
+
+duration:1000,
+
+once:true,
+
+offset:100
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

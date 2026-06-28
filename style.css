@@ -1,0 +1,1201 @@
+/*==================================================
+ CELESTIA GOURMET
+ FILE : css/style.css
+ PART 1
+==================================================*/
+
+/*============== GOOGLE FONT ==============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*============== ROOT VARIABLES ==============*/
+:root{
+
+--primary:#c89b3c;
+--secondary:#111111;
+--white:#ffffff;
+--black:#000000;
+--gray:#777777;
+--bg:#f8f8f8;
+--transition:.4s ease;
+
+}
+
+/*============== RESET ==============*/
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--bg);
+color:var(--secondary);
+overflow-x:hidden;
+
+}
+
+img{
+
+width:100%;
+display:block;
+transition:.4s;
+
+}
+
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+section{
+
+padding:100px 10%;
+
+}
+
+/*============== LOADER ==============*/
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+transition:.6s;
+
+}
+
+.loader-circle{
+
+width:70px;
+height:70px;
+border:6px solid rgba(255,255,255,.2);
+border-top:6px solid var(--primary);
+border-radius:50%;
+animation:spin 1s linear infinite;
+
+}
+
+#loader h2{
+
+margin-top:20px;
+color:#fff;
+letter-spacing:2px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*============== CURSOR ==============*/
+
+.cursor{
+
+width:20px;
+height:20px;
+border:2px solid var(--primary);
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:9999;
+transition:.05s;
+
+}
+
+/*============== PROGRESS BAR ==============*/
+
+#progressBar{
+
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:var(--primary);
+width:0;
+z-index:99999;
+
+}
+
+/*============== NAVBAR ==============*/
+
+.navbar{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(12px);
+z-index:1000;
+transition:.4s;
+
+}
+
+.navbar.active{
+
+background:#111;
+padding:14px 10%;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+color:#fff;
+
+}
+
+.logo i{
+
+font-size:28px;
+color:var(--primary);
+
+}
+
+.logo span{
+
+color:var(--primary);
+
+}
+
+.nav-links{
+
+display:flex;
+gap:35px;
+
+}
+
+.nav-links a{
+
+color:#fff;
+font-weight:500;
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-icons{
+
+display:flex;
+align-items:center;
+gap:20px;
+color:#fff;
+
+}
+
+.nav-icons i{
+
+cursor:pointer;
+transition:.3s;
+
+}
+
+.nav-icons i:hover{
+
+color:var(--primary);
+
+}
+
+#themeBtn{
+
+background:none;
+border:none;
+color:#fff;
+cursor:pointer;
+font-size:18px;
+
+}
+
+.menu-toggle{
+
+display:none;
+font-size:28px;
+color:#fff;
+cursor:pointer;
+
+}
+
+/*============== HERO ==============*/
+
+.hero{
+
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+overflow:hidden;
+
+}
+
+.hero-video{
+
+position:absolute;
+width:100%;
+height:100%;
+
+}
+
+.hero-video video{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.overlay{
+
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-container{
+
+position:relative;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+align-items:center;
+gap:50px;
+padding:0 10%;
+z-index:2;
+
+}
+
+.hero-left{
+
+color:#fff;
+
+}
+
+.hero-left span{
+
+color:var(--primary);
+font-weight:600;
+
+}
+
+.hero-left h1{
+
+font-size:65px;
+line-height:1.2;
+margin:20px 0;
+
+}
+
+.hero-left p{
+
+font-size:17px;
+line-height:1.8;
+margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:20px;
+
+}
+
+.primary-btn{
+
+background:var(--primary);
+padding:15px 35px;
+border-radius:30px;
+color:#fff;
+font-weight:600;
+transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.secondary-btn{
+
+border:2px solid #fff;
+padding:15px 35px;
+border-radius:30px;
+color:#fff;
+transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+background:#fff;
+color:#111;
+
+}
+
+.hero-info{
+
+display:flex;
+gap:40px;
+margin-top:50px;
+
+}
+
+.hero-info h2{
+
+font-size:30px;
+color:var(--primary);
+
+}
+
+.hero-right img{
+
+max-width:520px;
+margin:auto;
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+/*==================================================
+ CELESTIA GOURMET
+ FILE : css/style.css
+ PART 2
+==================================================*/
+
+/*================ STORY SECTION ================*/
+
+.story{
+background:#fff;
+}
+
+.section-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-header span{
+color:var(--primary);
+font-size:18px;
+font-weight:600;
+text-transform:uppercase;
+}
+
+.section-header h2{
+font-size:42px;
+margin:15px 0;
+color:var(--secondary);
+}
+
+.section-header p{
+max-width:700px;
+margin:auto;
+color:var(--gray);
+line-height:1.8;
+}
+
+.story-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:60px;
+align-items:center;
+}
+
+.story-image img{
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.story-content{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.story-box{
+display:flex;
+gap:20px;
+align-items:flex-start;
+}
+
+.story-box i{
+font-size:35px;
+color:var(--primary);
+}
+
+.story-box h3{
+margin-bottom:8px;
+font-size:22px;
+}
+
+.story-box p{
+color:var(--gray);
+line-height:1.8;
+}
+
+/*================ FEATURES ================*/
+
+.features{
+background:#f9f9f9;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:#fff;
+padding:40px 25px;
+text-align:center;
+border-radius:15px;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.feature-card i{
+font-size:45px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.feature-card h3{
+margin-bottom:15px;
+}
+
+.feature-card p{
+color:var(--gray);
+line-height:1.7;
+}
+
+/*================ STATISTICS ================*/
+
+.statistics{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+background:#111;
+}
+
+.stat-card{
+background:#1b1b1b;
+padding:35px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat-card h2{
+font-size:45px;
+color:var(--primary);
+}
+
+.stat-card p{
+margin-top:10px;
+color:#ddd;
+}
+
+/*================ MENU ================*/
+
+.menu{
+background:#fff;
+}
+
+.menu-filter{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:40px;
+}
+
+.menu-filter button{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#eee;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.menu-filter button.active,
+.menu-filter button:hover{
+background:var(--primary);
+color:#fff;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.menu-card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.menu-card:hover{
+transform:translateY(-10px);
+}
+
+.menu-image{
+position:relative;
+overflow:hidden;
+}
+
+.menu-image img{
+height:240px;
+object-fit:cover;
+transition:.5s;
+}
+
+.menu-card:hover img{
+transform:scale(1.1);
+}
+
+.tag{
+position:absolute;
+top:15px;
+left:15px;
+background:var(--primary);
+color:#fff;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+}
+
+.menu-content{
+padding:25px;
+}
+
+.rating{
+color:gold;
+margin-bottom:10px;
+}
+
+.menu-content h3{
+margin-bottom:12px;
+font-size:24px;
+}
+
+.menu-content p{
+color:var(--gray);
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.price-row h4{
+font-size:24px;
+color:var(--primary);
+}
+
+.price-row button{
+padding:10px 22px;
+background:var(--primary);
+color:#fff;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+
+.price-row button:hover{
+background:#111;
+}
+
+/*================ SEARCH BOX ================*/
+
+#searchFood{
+width:100%;
+max-width:450px;
+display:block;
+margin:0 auto 35px;
+padding:14px 20px;
+border:2px solid #ddd;
+border-radius:40px;
+outline:none;
+font-size:16px;
+transition:.3s;
+}
+
+#searchFood:focus{
+border-color:var(--primary);
+}
+
+/*================ GALLERY ================*/
+
+.gallery{
+background:#f7f7f7;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+height:280px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+transition:.5s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+.gallery-grid img.zoom{
+transform:scale(1.2);
+z-index:5;
+}
+/*==================================================
+ CELESTIA GOURMET
+ FILE : css/style.css
+ PART 3
+==================================================*/
+
+/*================ CHEF SECTION ================*/
+
+.chef{
+background:#fff;
+}
+
+.chef-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.chef-card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.chef-card:hover{
+transform:translateY(-10px);
+}
+
+.chef-card img{
+height:380px;
+object-fit:cover;
+}
+
+.chef-content{
+padding:25px;
+text-align:center;
+}
+
+.chef-content h3{
+font-size:24px;
+margin-bottom:8px;
+}
+
+.chef-content p{
+color:var(--gray);
+margin-bottom:20px;
+}
+
+.chef-social{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.chef-social a{
+width:42px;
+height:42px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:var(--primary);
+color:#fff;
+border-radius:50%;
+transition:.3s;
+}
+
+.chef-social a:hover{
+background:#111;
+}
+
+/*================ TESTIMONIALS ================*/
+
+.testimonials{
+background:#f8f8f8;
+}
+
+.testimonial-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.testimonial-card{
+background:#fff;
+padding:35px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-10px);
+}
+
+.testimonial-card i{
+font-size:40px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.testimonial-card p{
+line-height:1.8;
+color:var(--gray);
+margin-bottom:25px;
+}
+
+.customer h3{
+margin-bottom:5px;
+}
+
+.customer span{
+color:var(--primary);
+font-size:15px;
+}
+
+/*================ RESERVATION ================*/
+
+.reservation{
+background:#111;
+color:#fff;
+}
+
+.reservation-container{
+max-width:700px;
+margin:auto;
+}
+
+.reservation form{
+display:grid;
+gap:20px;
+}
+
+.reservation input,
+.reservation select,
+.reservation textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:16px;
+}
+
+.reservation textarea{
+height:140px;
+resize:none;
+}
+
+.reservation button{
+padding:15px;
+background:var(--primary);
+border:none;
+color:#fff;
+font-size:18px;
+cursor:pointer;
+border-radius:10px;
+transition:.3s;
+}
+
+.reservation button:hover{
+background:#fff;
+color:#111;
+}
+
+/*================ CONTACT ================*/
+
+.contact{
+background:#fff;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.contact-box{
+padding:35px;
+text-align:center;
+background:#f8f8f8;
+border-radius:15px;
+transition:.4s;
+}
+
+.contact-box:hover{
+transform:translateY(-8px);
+}
+
+.contact-box i{
+font-size:42px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.contact-box h3{
+margin-bottom:12px;
+}
+
+.contact-box p{
+color:var(--gray);
+line-height:1.7;
+}
+
+/*================ FOOTER ================*/
+
+footer{
+background:#111;
+color:#fff;
+padding:70px 10% 30px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-logo h2{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.footer-links a{
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:var(--primary);
+}
+
+.footer-social{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.footer-social a{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(255,255,255,.1);
+transition:.3s;
+}
+
+.footer-social a:hover{
+background:var(--primary);
+}
+
+.copyright{
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.2);
+text-align:center;
+font-size:15px;
+color:#ccc;
+}
+
+/*================ AI CHAT ================*/
+
+.chat-window{
+position:fixed;
+right:25px;
+bottom:90px;
+width:350px;
+height:500px;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+display:none;
+flex-direction:column;
+box-shadow:0 10px 35px rgba(0,0,0,.2);
+z-index:999;
+}
+
+.chat-header{
+background:var(--primary);
+color:#fff;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.chat-body{
+flex:1;
+padding:15px;
+overflow-y:auto;
+}
+
+.chat-input{
+display:flex;
+border-top:1px solid #ddd;
+}
+
+.chat-input input{
+flex:1;
+padding:14px;
+border:none;
+outline:none;
+}
+
+.chat-input button{
+width:60px;
+border:none;
+background:var(--primary);
+color:#fff;
+cursor:pointer;
+}
+
+.chat-message{
+padding:10px 14px;
+margin-bottom:10px;
+border-radius:10px;
+background:#f4f4f4;
+}
+
+.chat-message.user{
+background:var(--primary);
+color:#fff;
+margin-left:50px;
+}
+
+/*================ CART ================*/
+
+.cart-panel{
+position:fixed;
+top:0;
+right:-400px;
+width:350px;
+height:100%;
+background:#fff;
+box-shadow:-5px 0 20px rgba(0,0,0,.15);
+transition:.4s;
+z-index:1000;
+overflow-y:auto;
+}
+
+.cart-panel.active{
+right:0;
+}
+
+.cart-header{
+padding:20px;
+background:var(--primary);
+color:#fff;
+font-size:22px;
+}
+
+.cart-items{
+padding:20px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+padding:15px 0;
+border-bottom:1px solid #ddd;
+}
+
+.checkout-btn{
+width:90%;
+margin:20px auto;
+display:block;
+padding:15px;
+background:var(--primary);
+border:none;
+color:#fff;
+border-radius:8px;
+cursor:pointer;
+}
+
+/*================ LIVE CLOCK ================*/
+
+.live-clock{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#111;
+color:#fff;
+padding:10px 15px;
+border-radius:8px;
+font-size:15px;
+z-index:999;
+}
+
+/*================ RESPONSIVE ================*/
+
+@media(max-width:991px){
+
+.hero-container,
+.story-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.statistics{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav-links{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#111;
+display:none;
+flex-direction:column;
+padding:20px;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero-left h1{
+font-size:45px;
+}
+
+}
+
+@media(max-width:768px){
+
+.statistics{
+grid-template-columns:1fr;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-info{
+flex-direction:column;
+gap:20px;
+}
+
+.chat-window{
+width:95%;
+right:10px;
+}
+
+}
+
+@media(max-width:480px){
+
+section{
+padding:70px 20px;
+}
+
+.hero-left h1{
+font-size:35px;
+}
+
+.section-header h2{
+font-size:30px;
+}
+
+}
+body{
+    background:#c89b3c;
+}
